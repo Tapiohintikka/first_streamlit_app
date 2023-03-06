@@ -29,7 +29,7 @@ def get_fruityvice_data(this_fruit_choice):
   return fruitvice_normalized
  
     back_from_function = get_fruityvice_data(fruit_choice)
-    streamlit.dataframe(back_from_function)
+    back_from_function
     
   streamlit.error()
 
