@@ -30,7 +30,7 @@ try:
     streamlit.dataframe(fruityvice_normalized)
 except URLEerror as e:
   streamlit.error()
-  streamlit.stop()
+
 
 streamlit.header("The fruit load list contains:")
 #snowflake-related functions
@@ -50,3 +50,5 @@ streamlit.header("What fruit you like to add?")
 Add_my_fruit = streamlit.text_input('What fruit would you like information about?','Jackfruit')
 streamlit.write('Thanks for adding', Add_my_fruit)
 my_cur.execute("insert into fruit_load_list values ('from streamlit')")
+
+streamlit.stop()
